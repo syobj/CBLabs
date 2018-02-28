@@ -7,4 +7,5 @@ export class ApplicationLibrary {
     category: String;
     type: String;
     vote: number;
+    imgurl: String;
 }
