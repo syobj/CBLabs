@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule, SlicePipe } from '@angular/common';
 
 // Component
 import { LeftMenuComponent } from './left-menu/left-menu.component';
@@ -15,6 +16,7 @@ import { ApplicationLibraryComponent } from '../application-library/application-
         ApplicationLibraryComponent
     ],
     imports: [
+        CommonModule,
         RouterModule.forChild([
             {
                 path: 'dashboard',

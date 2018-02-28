@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 // Modules
 import { PublicModule } from './public/public.module';
 
+// Services
+import { ApplicationLibraryService } from './service/application-library.service';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -34,7 +38,7 @@ import { PublicModule } from './public/public.module';
     ]),
     PublicModule
   ],
-  providers: [],
+  providers: [ApplicationLibraryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
