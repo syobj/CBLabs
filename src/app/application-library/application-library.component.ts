@@ -13,6 +13,7 @@ import { ApplicationLibraryService } from '../service/application-library.servic
 export class ApplicationLibraryComponent implements OnInit {
 
     private appLibs: ApplicationLibrary[] = [];
+    private types: String[] = [];
 
     constructor(private appLibService: ApplicationLibraryService) {
 
@@ -21,5 +22,7 @@ export class ApplicationLibraryComponent implements OnInit {
     ngOnInit(): void {
         this.appLibService.getAllAppLibs()
             .then(response => this.appLibs = response as ApplicationLibrary[]);
+        this.appLibService.getTypes()
+            .then(response => this.types = response as String[]);
     }
 }

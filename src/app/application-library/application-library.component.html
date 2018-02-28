@@ -17,11 +17,7 @@
             <div class="filter menu-submenu tabs tabs_default">
                 <ul class="horizontal">
                     <li rel="#tab-1" class="xiao"><a href="#" rel="all">ALL</a></li>
-                    <li rel="#tab-2"><a href="#" rel="city">Hyperledger</a></li>
-                    <li rel="#tab-3"><a href="#" rel="cars">Ethereum</a></li>
-                    <li rel="#tab-4"><a href="#" rel="other">Multichain</a></li>
-                    <li rel="#tab-5"><a href="#" rel="classify01">classify</a></li>
-                    <li rel="#tab-6"><a href="#" rel="classify02">Others</a></li>
+                    <li *ngFor="let type of types"><a href="#" rel="all">{{type}}</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>

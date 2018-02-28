@@ -7,6 +7,7 @@ import { Route, Router, ActivatedRoute, Params } from '@angular/router';
     styleUrls: ['./left-menu.component.css']
 })
 export class LeftMenuComponent implements OnInit {
+
     constructor() {
 
     }
