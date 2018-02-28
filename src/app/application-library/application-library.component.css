@@ -176,13 +176,25 @@ a{text-decoration:none;}
 .search-add{
 	float:right;
 	margin:10px 0;
+	height:24px;
+	line-height:24px;
 }
 .search-add a{
 	color:#37aed9;
 	font-weight:bold;
 }
-.search-add a span{
-	border: 1px solid #37aed9;
+.search-add p{
+	margin:5px 0;
+	width: 14px;
+	height:14px;
+	float: left;
+	border-radius:50%;
+}
+.search-add img{
+	width:14px;
+	height:14px;
+	border:0;
+	float: left;
 }
 .searth-border{
 	border-bottom: 1px solid #fff;
