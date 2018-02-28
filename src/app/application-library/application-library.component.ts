@@ -29,7 +29,12 @@ export class ApplicationLibraryComponent implements OnInit {
 
     onTypeChanged(type: String): void {
         this.selectedType = type;
-        this.appLibService.getAppLibsByType(type)
-            .then(response => this.appLibs = response as ApplicationLibrary[]);
+        if (type === 'ALL') {
+            this.appLibService.getAllAppLibs()
+                .then(response => this.appLibs = response as ApplicationLibrary[]);
+        } else {
+            this.appLibService.getAppLibsByType(type)
+                .then(response => this.appLibs = response as ApplicationLibrary[]);
+        }
     }
 }

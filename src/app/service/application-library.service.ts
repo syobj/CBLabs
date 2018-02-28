@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 // Models
@@ -17,23 +18,27 @@ export class ApplicationLibraryService {
     }
 
     getAllAppLibs(): Promise<ApplicationLibrary[]> {
-        const getAllAppLibsUrl = 'http://localhost:8080/getAllAppLibs';
+        const getAllAppLibsUrl = 'http://192.168.1.193:8080/getAllAppLibs';
         return this.http.get(getAllAppLibsUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as ApplicationLibrary[]);
     }
 
     getTypes(): Promise<String[]> {
-        const getTypesUrl = 'http://localhost:8080/getTypes';
+        const getTypesUrl = 'http://192.168.1.193:8080/getTypes';
         return this.http.get(getTypesUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as String[]);
     }
 
     getAppLibsByType(type: String): Promise<ApplicationLibrary[]> {
-        const getAppLibsByTypeUrl = `http://localhost:8080/getAppLibsByType/${type}`;
+        const getAppLibsByTypeUrl = `http://192.168.1.193:8080/getAppLibsByType/${type}`;
         return this.http.get(getAppLibsByTypeUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as ApplicationLibrary[]);
+    }
+
+    search(term: String): Observable<ApplicationLibrary[]> {
+        return null;
     }
 }
