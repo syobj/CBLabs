@@ -280,8 +280,8 @@ a{text-decoration:none;}
 		margin-left:32px;
 	}
 	.box-right{
-		width:calc(100% - 230px);
-		left:230px;
+		width:calc(100% - 150px);
+		left:150px;
 	}
 }
 /*768分辨率（大于768px）*/

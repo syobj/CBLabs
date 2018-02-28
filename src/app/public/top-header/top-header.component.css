@@ -270,6 +270,7 @@ a{text-decoration:none;}
 	}
 	.logo{
 		width:230px;
+		border:0;
 	}
 	.logo a{
 		font-size:18px;

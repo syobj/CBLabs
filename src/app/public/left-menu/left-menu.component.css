@@ -106,7 +106,7 @@ a{text-decoration:none;}
 }
 .menu-list li div{
 	float:left;
-	margin:0 10px 0 50px;
+	margin:0 10px 0 20px;
 }
 .menu-list li p{
 	float:left;
@@ -266,20 +266,32 @@ a{text-decoration:none;}
 /*1024分辨率（大于1024px）*/
 @media (max-width: 1024px) {
 	.box-left{
-		width:230px;
-	}
-	.logo{
-		width:230px;
+		width:150px;
 	}
 	.logo a{
 		font-size:18px;
 	}
+	.resources{
+		height: 60px;
+	}
+	.menu-list li {
+		height:87px;
+		padding: 13px 0 0 2px;
+	}
 	.menu-list li div{
 		margin-left:32px;
 	}
+	.horizontal li div:first-child{
+		float:none;
+		margin: 0px;
+	}
+	.menu-list li p{
+		float:none;
+		line-height: 20px;
+	}
 	.box-right{
 		width:calc(100% - 230px);
-		left:230px;
+		left:150px;
 	}
 }
 /*768分辨率（大于768px）*/

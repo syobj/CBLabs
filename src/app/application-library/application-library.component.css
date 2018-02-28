@@ -285,6 +285,12 @@ a{text-decoration:none;}
 		overflow-x: hidden;
 		overflow-y: auto;
 	}
+	.container-content-bottom p{
+		width: 60%;
+	}
+	.container-content-bottom p:first-child{
+		width:40%;
+	}
 }
 /*768分辨率（大于768px）*/
 @media (max-width: 768px) {
