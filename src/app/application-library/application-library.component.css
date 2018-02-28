@@ -244,14 +244,30 @@ a{text-decoration:none;}
 	float:left;
 	padding:10px 0 10px 10px;
 }
+.container-content-text div{
+	color:#888;
+	font-size:14px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
 .container-content-text p{
 	color:#37aed9;
 	font-weight:bold;
 	font-size:18px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
 }
 .container-content-text span{
 	color:#888;
 	font-size:14px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
 }
 .container-content-bottom>p{
 	width:50%;
@@ -261,6 +277,10 @@ a{text-decoration:none;}
 	font-size:14px;
 	color:#888;
 	margin-left:10px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
 }
 /*1280分辨率以上（大于1200px）*/
 @media screen and (max-width:1200px){
