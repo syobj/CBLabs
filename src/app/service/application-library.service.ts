@@ -18,21 +18,21 @@ export class ApplicationLibraryService {
     }
 
     getAllAppLibs(): Promise<ApplicationLibrary[]> {
-        const getAllAppLibsUrl = '/getAllAppLibs';
+        const getAllAppLibsUrl = 'http://192.168.1.193:8080/getAllAppLibs';
         return this.http.get(getAllAppLibsUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as ApplicationLibrary[]);
     }
 
     getTypes(): Promise<String[]> {
-        const getTypesUrl = '/getTypes';
+        const getTypesUrl = 'http://192.168.1.193:8080/getTypes';
         return this.http.get(getTypesUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as String[]);
     }
 
     getAppLibsByType(type: String): Promise<ApplicationLibrary[]> {
-        const getAppLibsByTypeUrl = `/getAppLibsByType/${type}`;
+        const getAppLibsByTypeUrl = `http://192.168.1.193:8080/getAppLibsByType/${type}`;
         return this.http.get(getAppLibsByTypeUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as ApplicationLibrary[]);
