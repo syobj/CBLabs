@@ -132,6 +132,8 @@ a{text-decoration:none;}
 	bottom:0;
 	background:#efefef;
 	overflow:hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 .box-right iframe{
 	width:100%;
