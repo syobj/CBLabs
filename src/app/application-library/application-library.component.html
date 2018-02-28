@@ -16,7 +16,7 @@
         <div class="filters demo1">
             <div class="filter menu-submenu tabs tabs_default">
                 <ul class="horizontal">
-                    <li rel="#tab-1" class="xiao"><a href="#" rel="all">ALL{{appLibs.length}}</a></li>
+                    <li rel="#tab-1" class="xiao"><a href="#" rel="all">ALL</a></li>
                     <li rel="#tab-2"><a href="#" rel="city">Hyperledger</a></li>
                     <li rel="#tab-3"><a href="#" rel="cars">Ethereum</a></li>
                     <li rel="#tab-4"><a href="#" rel="other">Multichain</a></li>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="container-content-bottom">
                                 <p>
-                                    <span style="color:#e74c3c;font-size:20px;">★★★☆☆</span>
+                                    <span style="color:#e74c3c;font-size:20px;">{{'★★★★★' | slice:0:appLib.vote}}{{'☆☆☆☆☆' | slice:0:5-appLib.vote}}</span>
                                 </p>
                                 <p>
                                     <span>Category : {{appLib.category}}</span><br>
