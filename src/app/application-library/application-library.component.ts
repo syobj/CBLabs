@@ -14,6 +14,7 @@ export class ApplicationLibraryComponent implements OnInit {
 
     private appLibs: ApplicationLibrary[] = [];
     private types: String[] = [];
+    private selectedType: String = 'ALL';
 
     constructor(private appLibService: ApplicationLibraryService) {
 
@@ -24,5 +25,11 @@ export class ApplicationLibraryComponent implements OnInit {
             .then(response => this.appLibs = response as ApplicationLibrary[]);
         this.appLibService.getTypes()
             .then(response => this.types = response as String[]);
+    }
+
+    onTypeChanged(type: String): void {
+        this.selectedType = type;
+        this.appLibService.getAppLibsByType(type)
+            .then(response => this.appLibs = response as ApplicationLibrary[]);
     }
 }

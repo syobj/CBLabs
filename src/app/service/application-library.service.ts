@@ -8,8 +8,6 @@ import { ApplicationLibrary } from '../model/application-library';
 
 @Injectable()
 export class ApplicationLibraryService {
-    private getAllAppLibsUrl = 'http://localhost:8080/getAllAppLibs';
-    private getTypesUrl = 'http://localhost:8080/getTypes';
     private requestHeaders = new Headers();
 
     constructor(private http: Http) {
@@ -19,14 +17,23 @@ export class ApplicationLibraryService {
     }
 
     getAllAppLibs(): Promise<ApplicationLibrary[]> {
-        return this.http.get(this.getAllAppLibsUrl, {headers: this.requestHeaders})
+        const getAllAppLibsUrl = 'http://localhost:8080/getAllAppLibs';
+        return this.http.get(getAllAppLibsUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as ApplicationLibrary[]);
     }
 
     getTypes(): Promise<String[]> {
-        return this.http.get(this.getTypesUrl, {headers: this.requestHeaders})
+        const getTypesUrl = 'http://localhost:8080/getTypes';
+        return this.http.get(getTypesUrl, {headers: this.requestHeaders})
             .toPromise()
             .then(response => response.json() as String[]);
+    }
+
+    getAppLibsByType(type: String): Promise<ApplicationLibrary[]> {
+        const getAppLibsByTypeUrl = `http://localhost:8080/getAppLibsByType/${type}`;
+        return this.http.get(getAppLibsByTypeUrl, {headers: this.requestHeaders})
+            .toPromise()
+            .then(response => response.json() as ApplicationLibrary[]);
     }
 }

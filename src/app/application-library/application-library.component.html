@@ -17,7 +17,7 @@
             <div class="filter menu-submenu tabs tabs_default">
                 <ul class="horizontal">
                     <li rel="#tab-1" class="xiao"><a href="#" rel="all">ALL</a></li>
-                    <li *ngFor="let type of types"><a href="#" rel="all">{{type}}</a></li>
+                    <li *ngFor="let type of types" (click)="onTypeChanged(type)"><a href="javascript:void(0);">{{type}}</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
