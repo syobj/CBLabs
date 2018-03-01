@@ -183,18 +183,10 @@ a{text-decoration:none;}
 	color:#37aed9;
 	font-weight:bold;
 }
-.search-add p{
-	margin:5px 0;
-	width: 14px;
-	height:14px;
-	float: left;
-	border-radius:50%;
-}
 .search-add img{
 	width:14px;
 	height:14px;
 	border:0;
-	float: left;
 }
 .searth-border{
 	border-bottom: 1px solid #fff;
@@ -394,6 +386,9 @@ a{text-decoration:none;}
 	}
 	.search-input,.search-add{
 		float:none;
+	}
+	.search-input{
+		margin:0 0 10px 0px;
 	}
 	.menu-submenu li{
 		width:100%;
